@@ -29,4 +29,4 @@ More information about each of these items will be included in various subsystem
 
 ## Architecture
 
-See the ![architecture directory](architecture/) for more information.
+See the <a href="architecture">architecture directory</a> for more information.

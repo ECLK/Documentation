@@ -6,6 +6,8 @@ Security considerations for Elections System involve the following aspects:
 * Data privacy for both data at rest and while being transferred to ensure no unauthorized or abusive actions are possible.
 * Deployment security to ensure the integrity of the entire solution.
 
+This document covers security architecture for all of these requirements.
+
 ## User Management
 
 Every application and API access will require authentication and  authorization. Credentials and permissions will be granted based on the kind of user accessing and role(s).
@@ -24,7 +26,7 @@ The currently planned different kinds of users are the following:
 
 * Media - These are registered (?) media organizations that have been given API access to various APIs. These will be in another OU in the same LDAP.
 
-* Visitors - These are random people from the Internet who visit the website and for whom we need some kind of authentication in order for them to perform transactions (such as reporting a violation).
+* Visitors - These are random people from the Internet who visit the website and for whom we need some kind of authentication in order for them to perform transactions (such as reporting a violation). Note that with this approach we will never create users and passwords for any visitor.
 
 ### Architecture
 
@@ -38,6 +40,29 @@ The currently planned different kinds of users are the following:
 
 ### Federation for Citizens
 
-The eGrama Niladari project will be creating a digital identity (a username & password combination) for all citizens. 
+The eGrama Niladari (eGN) project will be creating a digital identity (a username & password combination) for all citizens. What that mens is that the responsibiltiy for authenticating the user is taken by the eGN project and we will be able to ask for some information from them upon successful authentication of a particular user.
 
-## Link Security
+We will require the following attributes from the eGN identity provider:
+
+* User ID
+* Name
+* Grama Niladari division
+* Division
+* District
+
+### Federation for Visitors
+
+We will support a selected set of social login systems to allow visitors to authenticate themselves. This list is flexible and as other Sri Lanka government services start offering digital identities and federation capability, we will keep adding more to this list.
+
+Current list of social login identity providers:
+
+* Facebook
+* Twitter
+* LinkedIn
+* Google
+* Microsoft
+
+## API Security
+
+Given the microservices and API based architecture of all the systems, API security becomes paramount. 
+

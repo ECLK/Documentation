@@ -20,11 +20,12 @@ The currently planned different kinds of users are the following:
 
 * Election Staff - These users are those who are provisioned during the execution of a particular election. They will be given appropriate permissions that are valid only during that period and they will have no access after the election is over. These users will be kept in a separate OU (organization unit) within the same internal LDAP server.
 
-* Citizens - These are citizens who are allowed to login and update their data. The expectation is to federate this login from the Grama Niladari system that is currently under development.
+* Citizens - These are citizens who are allowed to login and update their data. 
+Election nominees are a specialisation of citizens. Electors are a specialisation of citizens. 
 
 * E2G Users - These are various government organizations that require access to various EC systems either via the applications or via the API. These include Police.
 
-* Media - These are registered (?) media organizations that have been given API access to various APIs. These will be in another OU in the same LDAP.
+* External Trusted Users - These are registered media organizations and developers that have been given API access to various APIs. 
 
 * Visitors - These are random people from the Internet who visit the website and for whom we need some kind of authentication in order for them to perform transactions (such as reporting a violation). Note that with this approach we will never create users and passwords for any visitor.
 
@@ -34,9 +35,26 @@ The currently planned different kinds of users are the following:
   <img src="umarch.png">
 </p>
 
-### LDAP Design
+### LDAP Design for EC Staff and Election Staff
 
-(Details on the LDAP OU structure and other details)
+LDAP will hold election commission staff and election staff. 
+All users will be maintained in a flat OU structure. Corresponding to the 2 main user groups.
+* Election Commission Staff
+* Election Staff
+
+
+Proposed OU Structure for Users
+
+| User Types                    | OU
+| ---                           | ---
+| Election Commission Staff     | ou=staff,dc=ec,dc=gov,dc=lk
+| Election Staff                | ou=election,dc=ec,dc=gov,dc=lk
+
+**LDAP Groups**
+
+A high level set of LDAP Groups will be defined as it allows to assign permissions at bulk level.
+Additionally, app level user groups will be maintained in the LDAP.
+
 
 ### Federation for Citizens
 
@@ -49,6 +67,14 @@ We will require the following attributes from the eGN identity provider:
 * Grama Niladari division
 * Division
 * District
+
+### E2G Users
+
+test
+
+### Trusted External Users
+
+test
 
 ### Federation for Visitors
 

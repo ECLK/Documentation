@@ -23,9 +23,9 @@ The currently planned different kinds of users are the following:
 * Citizens - These are citizens who are allowed to login and update their data. 
 Election nominees are a specialisation of citizens. Electors are a specialisation of citizens. 
 
-* E2G Users - These are various government organizations that require access to various EC systems either via the applications or via the API. These include Police.
+* External Trusted Users - These are various government organizations that require access to various EC systems either via the applications or via the API. These include Police.
 
-* External Trusted Users - These are registered media organizations and developers that have been given API access to various APIs. 
+* External API Store Users - These are registered media organizations and developers that have been given API access to various APIs. 
 
 * Visitors - These are random people from the Internet who visit the website and for whom we need some kind of authentication in order for them to perform transactions (such as reporting a violation). Note that with this approach we will never create users and passwords for any visitor.
 
@@ -68,13 +68,29 @@ We will require the following attributes from the eGN identity provider:
 * Division
 * District
 
-### E2G Users
+### External Trusted Users
 
-test
+This category of users require access to EC applications and APIs.   
+These users can be on-boarded in several ways.
+1. Identity Server self-registration page and then approved by EC staff member
+2. Bulk uploads via a CSV file
+3. Federated from other government organization IdP
+ 
+First and second type of users will be stored in a database as a secondary userstore of the identity server.
+The third type of users will be federated from government organization IdP and it needs to be configured.  
 
-### Trusted External Users
+In order to ensure security of the system in this scenario all unused accounts for last 30 days will be locked.
+ 
+### External API Store Users
 
-test
+External parties such as media organizations may require access to APIs. 
+This category of users require API invocation, brows APIs, token generation functionality which is available in the store. 
+API Users/Developers from external organizations can use the identity server self-registration to request for access. They will indicate that they need subscriber functionality.
+EC staff members can verify the identity by offline means and approve the request using workflows.
+After gaining access as subscriber these users they can perform,
+* Browse APIs
+* Generate Tokens
+* Invoke APIs
 
 ### Federation for Visitors
 

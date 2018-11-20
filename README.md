@@ -1,21 +1,48 @@
 # Documentation for Sri Lanka Elections Commission Software
 
-The Elections Commission is an elections-as-a-service organization, with the people and government of Sri Lanka being their primary customer. Currently, the EC is operating only with that customer but the long term objective of the software is to make it possible to operate any election with varying rules for the electors, candidates, voting technology, results process and so on. 
+The Elections Commission is an elections-as-a-service organization, with the people and Government of Sri Lanka (GoSL) being their primary customer. Currently, the EC is operating only with that customer but the long term objective of the software is to make it possible to operate any election with varying rules for the electors, candidates, voting technology, results process and so on. 
 
-Give the current priorities, getting the software to that level is not the immediate task (as of November 2018).
+As of November 2018, our immediate goal is to build a working software platform for the Elections Commission for the purpose of running elections for the GoSL: that is, to be able to run local government, provincial government, parliamentary and presidential elections as well as referendums.
 
 This repository contains various documents for the software starting with design docs to user level docs.
 
-## Terminology
+## Structure of Elections
 
-* Elector - a person eligible to vote
+For all GoSL elections other than referendums, the stakeholders of elections are as follows (<a href="https://docs.google.com/drawings/d/1WPGMVZbIvU8_njDV9OQv8GfGbLuRmG26RtWrNYdsBNk/edit">source</a>):
+
+<p align="center">
+  <img src="stakeholders.png"/>
+</p>
+
+
+The explanation of each of these are:
+* Citizen - citizen of Sri Lanka
+* Elector - a person eligible to vote (currently any citizen over age 18)
+* Registered elector - an elector who is registered to vote
 * Voter - someone who votes in an election
+* Independent campaign - a group of people who register for the purpose of competing in an election
+* Political party - a registered political party (which can choose to compete in any election)
+* Nomination list - list of candidates for a particular election nominated by a particular party
 
-## Functionality
+## Administrative Organization
+
+The following diagram depicts the administrative organization of the country as it pertains to elections (<a href="https://docs.google.com/drawings/d/1-rdxbI48zCRmyL4_3STQtReStyICF9JFUdyx2f4ZtBw/edit">source</a>):
+
+<p align="center">
+  <img src="adminorg.png"/>
+</p>
+
+The left arm of the figure depicts how the country's 9 provinces are structured for administrative purposes. 
+
+The right side shows how it is structured for elections purposes. In particular, the districts of Jaffna, Vavuniya and Killinochchi are considered as the Vanni electoral district. Similarly, X & Y are combined to Z, reducing the 25 administrative district to 22 electoral district.
+
+The electoral district is significant as vote counting centers are typically located centrally at a district level. The 2018 local government election however used a different approach where counting happened at a more granular level.
+
+## Elections Systems Functionality
 
 The functionality of elections software can be categorized into 3 distinct phases: Pre-election, during an election and post-election. 
 
-| Pre-election Period | During Election     | Post-election Period |
+| Pre-election Period | During Election Period | Post-election Period |
 | ---                 | ---                 | ---                  |
 | Register electors   | Create an election  |  Publish analytics   |
 | Address complaints  | Manage election operations |  Address complaints  |
@@ -27,6 +54,10 @@ The functionality of elections software can be categorized into 3 distinct phase
 
 More information about each of these items will be included in various subsystem documents.
 
-## Architecture
+## Software Architecture
+
+We are designing a single integrated architecture for all the software for supporting the entire election process as indicated in the functionality section above.
+
+The overall architecture follows a microservices architecture approach.
 
 See the <a href="architecture">architecture directory</a> for more information.

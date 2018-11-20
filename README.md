@@ -61,3 +61,9 @@ We are designing a single integrated architecture for all the software for suppo
 The overall architecture follows a microservices architecture approach.
 
 See the <a href="architecture">architecture directory</a> for more information.
+
+## Requirements and Use Cases
+
+While all the features are being implemented using a single common architecture, each area has its own set of detailed requirements and use cases.
+
+See the <a href="requirements">requirements</a> directory for more information.

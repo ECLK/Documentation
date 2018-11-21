@@ -34,7 +34,7 @@ The following diagram depicts the administrative organization of the country as 
 
 The left arm of the figure depicts how the country's 9 provinces are structured for administrative purposes. 
 
-The right side shows how it is structured for elections purposes. In particular, the districts of Jaffna, Vavuniya and Killinochchi are considered as the Vanni electoral district. Similarly, X & Y are combined to Z, reducing the 25 administrative district to 22 electoral district.
+The right side shows how it is structured for elections purposes. In particular, the districts of Jaffna and Killinochchi are considered as the Jaffna electoral district; and Vavuniya, Mullaitivu and Mannar are considered as the Vanni electoral district. This reduces the 25 administrative districts to 22 electoral districts.
 
 The electoral district is significant as vote counting centers are typically located centrally at a district level. The 2018 local government election however used a different approach where counting happened at a more granular level.
 

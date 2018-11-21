@@ -104,6 +104,22 @@ Current list of social login identity providers:
 * Google
 * Microsoft
 
+## Application Security
+
+The overall architecture in the system overview page illustrated how both Web and mobile apps will consume the functionality of the elections system via the API manager. 
+
+The following diagram illustrates the flow of interactions for a Web app:
+
+<p align="center">
+  <img src="spa-login-flow-web.png"/>
+</p>
+
+The following diagram illustrates the flow of interactions for a mobile app:
+
+<p align="center">
+  <img src="spa-login-flow-mobile.png"/>
+</p>
+
 ## API Security
 
 Given the microservices and API based architecture of all the systems, API security becomes paramount. 

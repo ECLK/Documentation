@@ -47,12 +47,19 @@ The functionality of elections software can be categorized into 3 distinct phase
 | Register electors   | Create an election  |  Publish analytics   |
 | Address complaints  | Manage election operations |  Address complaints  |
 |                     | Nominate candidates |                      |
+|                     | Setup election day  |                      |
 |                     | Run voting process  |                      |
 |                     | Count votes         |                      |
 |                     | Publish results     |                      |
 |                     | Address complaints  |                      |
 
 More information about each of these items will be included in various subsystem documents.
+
+## Requirements and Use Cases
+
+While all the features are being implemented using a single common architecture, each area has its own set of detailed requirements and use cases.
+
+See the <a href="requirements">requirements</a> directory for more information.
 
 ## Software Architecture
 
@@ -61,9 +68,3 @@ We are designing a single integrated architecture for all the software for suppo
 The overall architecture follows a microservices architecture approach.
 
 See the <a href="architecture">architecture</a> directory for more information.
-
-## Requirements and Use Cases
-
-While all the features are being implemented using a single common architecture, each area has its own set of detailed requirements and use cases.
-
-See the <a href="requirements">requirements</a> directory for more information.

@@ -1,20 +1,22 @@
 # System Requirements
 
-This section documents the requirements for each part of the software. 
+This section documents the requirements for each part of the software. If you want to help evolve these please join this forum: https://groups.google.com/forum/#!forum/lsf-elections.
 
 ## Elections & Nominations Management
 
 This system is responsible for creating an election, managing parties / independent groups and nominating elections.
 
+* Nomination Module: https://docs.google.com/document/d/1oTdU1fwYz48ZjTTnHdjFsDZuLtXvf_G5h3ezi53qk80/edit
+* Process Document - Provincial Council : https://docs.google.com/document/d/1TvPzII1pG-wvmuWYDAvJL_PXi62AoJyyASea-XQSv0Q/edit
+
 ## Incidents Management
 
 * Process document: https://docs.google.com/document/d/1OEM2zoWFKxR_lMxVwhSmRrZ4FnFl4VW5ynnSXLbpY-w/edit
 * Process (Police): https://docs.google.com/document/d/1gYS64SxSVo3IhEIFqRFp-HRWLBi_5b90_3Ij7sm9IxI/edit?usp=sharing
-Process design: https://docs.google.com/drawings/d/11MOzbkx5gOjxM_jA6delCs_Y7NI9uwh4D06NLbSK5Ac/edit
-EC Incidents ERD: https://drive.google.com/file/d/1P9f8z1koxMpR9dpjBpRa4qEuBWxNKmwh/view  
+* Process design: https://docs.google.com/drawings/d/11MOzbkx5gOjxM_jA6delCs_Y7NI9uwh4D06NLbSK5Ac/edit
+* EC Incidents ERD: https://drive.google.com/file/d/1P9f8z1koxMpR9dpjBpRa4qEuBWxNKmwh/view  
 
 Source respository: https://github.com/ECLK/IncidentManagement
-
 
 ## Election Day Operations & Results Tabulation / Dissemination
 
@@ -26,5 +28,3 @@ This system is responsible for "running" the election day - issuing ballot boxes
   * Parliamentary: https://docs.google.com/drawings/d/1D3W1wj7yfFMyGFEN9fkjEA1aA0L9EHE_Zrs7KMzVyH4/edit?usp=sharing
   * Provincial Council: XXX
   * Local Authority: https://docs.google.com/drawings/d/1be_tCsqHU0n3Vzj8sXPhobj6g682cai9Mgg3bbr4Op4/edit?usp=sharing
-
-Source respository: https://github.com/ECLK/IncidentManagement

@@ -11,6 +11,8 @@ This system is responsible for creating an election, managing parties / independ
 
 ## Incidents Management
 
+During an election process, many different kinds of incidents can occur. These can be violations of election laws, can be violence related to the election and so on. This system is a tracking, monitoring and reporting system for incidents.
+
 * Process document: https://docs.google.com/document/d/1OEM2zoWFKxR_lMxVwhSmRrZ4FnFl4VW5ynnSXLbpY-w/edit
 * Process (Police): https://docs.google.com/document/d/1gYS64SxSVo3IhEIFqRFp-HRWLBi_5b90_3Ij7sm9IxI/edit?usp=sharing
 * Process design: https://docs.google.com/drawings/d/11MOzbkx5gOjxM_jA6delCs_Y7NI9uwh4D06NLbSK5Ac/edit
